@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declarando variáveis</title>
+</head>
+<body>
+    <h1>Tópicos da aula</h1>
+    <ul>
+        <li>Var, let e const</li>
+        <li>Truthy e falsy</li>
+        <li>Conversão de tipos</li>
+    </ul>
+    <hr />
+
+    <h3>Var, let e const</h3>
+    <span>Verificar o código interno da página</span>
+    <script>
+        // var
+        // Não comendável para desenvolvimento nos dias de hoje
+        // É um tipo de variavel, que pode ser acessado de qualquer lugar do código
+        // Podendo ocorrer bugs inesperados
+
+        // let
+        // O tipo de variavel recomendada quando você quer mexer com dados que 
+        // Mudem conforme o código é executado
+        // Dados dentro de uma variavel do tipo let podem mudar e ser qualquer um 
+        // Dos tipos primitivos
+
+        // Const
+        // Const são utilizadas quando você quer criar variáveis constantes
+        // Ou seja, variaveis que não quer mudar o resultado dentro delas
+
+        // Exemplo:
+
+        let shape = "triangle";
+        const height = 4;
+        const width = 5;
+        let area;
+
+        if (shape === "square") {
+            area = height * width;
+        } else if (shape === "triangle") {
+            area = (height * width) / 2;
+        }
+
+        console.log(area);
+    </script>
+    <hr />
+
+    <h3>Truthy e falsy</h3>
+    <span>Verificar o código interno da página</span>
+    <script>
+        // Truthy ou falsy
+        // Alguns tipos de variaveis em diferentes linguagens de programação
+        // São tratados como true ou false, e o JavaScript não é diferente
+        // Ele considera alguns tipos em condicionais como true ou false
+        // Exemplo:
+
+        console.log(0 == false); // true, porque no JS 0 é falso
+        console.log(1 == true); // true, porque no JS 1 é true
+        console.log("" == false); // true, porque uma string vazia no JS é false
+        // Contudo, uma string preenchida não é true, ela é uma string simplesmente
+
+        // null e undefined
+        // O tipo de variavel null é um object criado pelo JS que deveria significar
+        // uma variavel vazia, sem necessáriamente ser um number, string ou boolean
+        // Então eles criaram esse tipo null para satisfazer essa necessidade
+
+        // Já o tipo undefined é quando criamos uma variável mas não atribuimos
+        // Nenhum valor a ela
+        // Exemplo
+
+        let varUndefined;
+        let varNull = null;
+
+        console.log(varNull == varUndefined); // true, porque um tipo vazio com um tipo vazio é true em JS
+        console.log(typeof varUndefined); // Essa variável será do tipo undefined
+        console.log(typeof varNull) // Essa variável será do tipo object
+    </script>
+    <hr />
+
+    <h3>Conversão de tipos</h3>
+    <span>Verificar o código interno da página</span>
+    <script>
+        // Tipo de dados 
+        // Podemos converter tipos primários em outros tipos primários
+        // Como no exemplo acima, 0 == false é true pois o 0 em JS é considerado falso
+        // Porém conseguimos transformar strings (somente com números) em tipo number
+        // E se quiser tratar algum número como string podemos fazer o inverso também
+
+        // Conversão implítica
+        // Podemos verificar se duas variaveis contém os mesmos caractéres, independentes
+        // Dos seus tipos e podemos verificar se são iguais incluindo o seus tipos de dados
+        // Exemplo:
+
+        let number1 = 1;
+        let string1 = "1";
+
+        console.log(number1 == string1); // true, pois os dois são números independentes dos seus tipos
+        console.log(number1 === string1); // false, pois esses números não são identicos em tipos
+
+        // Conversão Explícita 
+        // Podemos fazer uma conversão explícita através de uma função
+        // Number() para transformar alguma variável para tipo number
+        // String() para transformar alguma variável para tipo string
+        // Exemplo:
+
+        console.log(number1 + string1); // 11, pois ele está transformando o number em string
+        console.log(number1 + Number(string1)); // 2, pois ele está transformando a string em um number
+
+        // E temos como retornar um Not a Number, NaN caso a string contenha algum caracter
+        // Exemplo:
+
+        let string1WithChar = "1a";
+
+        console.log(number1 + Number(string1WithChar)); // NaN, pois contém caracter na variavel do tipo string
+        
+    </script>
+</body>
+</html>
