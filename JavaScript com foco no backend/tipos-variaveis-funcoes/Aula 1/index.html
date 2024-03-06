@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos primitivos</title>
+</head>
+<body>
+    <h1>Tipo de dados</h1>
+    <ul>
+        <li>Number</li>
+        <li>String</li>
+        <li>boolean</li>
+    </ul>
+
+    <h3>Number</h3>
+    <span>Verificar o código da página</span>
+    <script>
+        // number
+        
+        const myNumber = 3;
+
+        const firstNum = 1;
+        const secondNum = 2;
+
+        const operationSum = firstNum + secondNum;
+        const operationSub = firstNum - secondNum;
+        const operationTime = firstNum * secondNum;
+        const operationDiv = firstNum / secondNum;
+
+        console.log(operationSum);
+        console.log(operationSub);
+        console.log(operationTime);
+        console.log(operationDiv);
+
+        // float
+
+        const floatNum = 3.2;
+        const floatNumWithoutZero = .9;
+
+        const floatOperationTime = floatNum * floatNumWithoutZero;
+
+        console.log(floatOperationTime);
+
+        // Nan -> Not a Number
+
+        const name = "José";
+
+        console.log(floatNum * name);
+    </script>
+    <hr />
+
+    <h3>String</h3>
+    <span>Verificar o código da página</span>
+    <script>
+        // String
+
+        const text1 = "Hello World!";
+        const text2 = ' Hello World!';
+        
+        const password = "1234@Abc";
+        const stringNumber = "12345";
+
+        const quote = "William Shakespeare said 'To be, or not to be, that is the question'";
+        console.log(quote);
+
+        // template string
+
+        const text3 = `${text1}`;
+
+        // Concat
+
+        console.log(text1 + text2);
+    </script>
+    <hr />
+
+    <h3>Boolean</h3>
+    <span>Verificar o código da página</span>
+    <script>
+        const n1 = 1;
+        const n2 = 2;
+
+        console.log(n1 == n2); // false
+        console.log(n1 != n2); // true
+
+        const t1 = "José";
+        const t2 = "josé";
+
+        console.log(t1 === t2); // false, pois letras maiusculas são consideradas letras diferentes
+    </script>
+</body>
+</html>
